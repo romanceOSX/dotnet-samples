@@ -1,0 +1,6 @@
+--> https://learn.microsoft.com/en-us/dotnet/fundamentals/
+--> https://learn.microsoft.com/en-us/dotnet/core/tools/
+--> https://learn.microsoft.com/en-us/dotnet/core/tutorials/
+
+dotnet new <template_name>
+
