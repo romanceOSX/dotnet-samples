@@ -11,6 +11,7 @@ namespace HelloWorld
             tutStrings();
             tutNumbers();
             tutTuples();
+            tutProgramFlow();
         }
 
         //
@@ -92,6 +93,17 @@ namespace HelloWorld
 
             // calling Point record's user-defined method
             Console.WriteLine($"Calling slope on Point {point2.Slope()}");
+        }
+
+        //
+        // program Flow
+        //
+        public static void tutProgramFlow() {
+            // samo
+            Console.WriteLine($"-- Tutorial Program flow");
+            for (int counter = 0; counter < 10; ++counter) {
+                Console.WriteLine($"This is the counter {counter}");
+            }
         }
     }
 }
