@@ -7,8 +7,10 @@ namespace HelloWorld
         //
         static void Main(string[] args) {
             Console.WriteLine("Hello World");
+
             tutStrings();
             tutNumbers();
+            tutTuples();
         }
 
         //
@@ -52,6 +54,44 @@ namespace HelloWorld
         //
         public static void tutNumbers() {
             Console.WriteLine("-- Tutorial Numbers");
+            int a = 32;
+            Console.WriteLine(a);
+            Console.WriteLine($"Max limit of ints: {int.MaxValue}");
+            Console.WriteLine($"Min limit of ints: {int.MinValue}");
+
+            Console.WriteLine($"Max limit of ints: {double.MaxValue}");
+            Console.WriteLine($"Max limit of ints: {double.MinValue}");
+            Console.WriteLine($"sizeof double: {sizeof(double)}");
+        }
+
+        // record type
+        public record Point(int X, int Y) {
+            public double Slope() => (double)Y / (double)X;
+        }
+
+        //
+        // tuples
+        //
+        public static void tutTuples() {
+            Console.WriteLine("-- Tutorial tuples/types");
+            var pt = (X:1.0, Y:3.44);
+            var slope = (double)pt.Y / (double)pt.X;
+            Console.WriteLine($"The slope of the curve is: {slope}");
+
+            // modified copy
+            var pt2 = pt with {X = 4.444};
+            Console.WriteLine(pt2);
+
+            // point
+            var point = new Point(3, 4);
+            var point2 = point with {
+                X = 33,
+                Y = 33,
+            };
+            Console.WriteLine($"Original point = \"{point}\", edited point = \"{point2}\"");
+
+            // calling Point record's user-defined method
+            Console.WriteLine($"Calling slope on Point {point2.Slope()}");
         }
     }
 }
