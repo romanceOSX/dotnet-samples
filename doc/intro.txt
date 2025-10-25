@@ -4,3 +4,26 @@
 
 dotnet new <template_name>
 
+Intro to dotnet
+    --> https://learn.microsoft.com/en-us/dotnet/core/introduction
+
+C# docs
+    --> https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/
+
+Tuples and records
+    records are typed tuples, tuples are just data groupers
+    A record is a named tuple with classes' capabilities
+
+    A record is a shorthand for -> 'record class'
+    There is also a 'record struct'
+
+    A record is a modifier that instructs the compiler to write some methods for you
+
+Types
+    All named types in c# are wither an struct or a class
+        class -> reference type
+        struct -> value type
+
+    Normally structs are used for storing data (encapsulation types)
+    And classes for introducing interfaces and polymorphism
+    
