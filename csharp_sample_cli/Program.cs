@@ -12,6 +12,7 @@ namespace HelloWorld
             tutNumbers();
             tutTuples();
             tutProgramFlow();
+            tutListsCollections();
         }
 
         //
@@ -103,6 +104,37 @@ namespace HelloWorld
             Console.WriteLine($"-- Tutorial Program flow");
             for (int counter = 0; counter < 10; ++counter) {
                 Console.WriteLine($"This is the counter {counter}");
+            }
+        }
+
+        //
+        // Lists and Collections
+        //
+        public static void tutListsCollections() {
+            Console.WriteLine("-- Tutorial Lists and Collections");
+            List<string> strings = ["A", "variable", "amount", "of", "strings"];
+
+            strings.Add("Some Value");
+            strings.Add("I added another one");
+           
+            // illegal
+            //var ss = ["these", "are", "some", "strings"];
+            
+            Console.WriteLine($"Printing the a collection with {strings.Count()} elements");
+            foreach (var s in strings)
+            {
+                Console.WriteLine($"Iterated string: {s.ToUpper()}");
+            }
+
+            // finding the index of a match
+            var index = strings.IndexOf("amount");
+            Console.WriteLine($"The index of \"amount\" is {index}, which is collection[{index}] = {strings[index]}");
+
+            // sorting alphabetically
+            strings.Sort();
+            Console.WriteLine("Print after sorting");
+            foreach (var s in strings) {
+                Console.WriteLine($"element: {s}");
             }
         }
     }
