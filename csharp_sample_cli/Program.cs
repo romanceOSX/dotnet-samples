@@ -2,18 +2,20 @@
 namespace HelloWorld
 {
     internal class Program {
+        //
+        // main
+        //
         static void Main(string[] args) {
             Console.WriteLine("Hello World");
+            tutStrings();
+            tutNumbers();
+        }
 
-            var names = new [] {"Abc", "SomeD", "SomeC"};
-            foreach (var name in names) {
-                Console.WriteLine($"Hello {name}");
-            }
-
-            //
-            // strings
-            //
-
+        //
+        // strings
+        //
+        public static void tutStrings() {
+            Console.WriteLine("-- Tutorial String");
             // string length
             string sample_name = "Juan";
             Console.WriteLine($"This is the name: {sample_name}, whose length is: {sample_name.Length}");
@@ -27,7 +29,30 @@ namespace HelloWorld
             Console.WriteLine($"[{sample_name}]");
             sample_name = sample_name.Trim();
             Console.WriteLine($"[{sample_name}]");
+
+            // replace
+            var replace_string = "Something to replace to";
+            Console.WriteLine(replace_string);
+            replace_string = replace_string.Replace("Something", "Goo");
+            Console.WriteLine(replace_string);
+            
+            // to Lower / to Upper
+            var to_low_up = "Some Unified String";
+            Console.WriteLine(to_low_up.ToLower());
+            Console.WriteLine(to_low_up.ToUpper());
+
+            // contains
+            var contains_str = "Some containing string foo bar goo";
+            Console.WriteLine(contains_str.Contains("goo"));
+            Console.WriteLine(contains_str.Contains("Goo"));
         }
-    }   
+
+        //
+        // numbers
+        //
+        public static void tutNumbers() {
+            Console.WriteLine("-- Tutorial Numbers");
+        }
+    }
 }
 
