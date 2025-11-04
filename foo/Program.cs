@@ -1,4 +1,6 @@
-﻿
+﻿using Spectre.Console;
+using System.Text.Json;
+
 namespace  MyApp;
 
 delegate void MyDelegate(int a, int b);
@@ -15,6 +17,8 @@ class Application {
         MyDelegate del = new MyDelegate(Foo1);
         del += Foo2;
 
+        var len = del.GetInvocationList().GetLength(0);
+        Console.WriteLine($"The invocation list length is {len}");
         del.Invoke(1, 2);
     }
 
